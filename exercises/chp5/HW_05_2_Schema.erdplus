@@ -1,0 +1,335 @@
+{
+  "diagramType": 2,
+  "data": {
+    "nodes": [
+      {
+        "id": "0288c63b-032e-438c-a128-b10cf86491af",
+        "type": "Table",
+        "position": {
+          "x": 509,
+          "y": 148
+        },
+        "data": {
+          "label": "User",
+          "isConnectable": false,
+          "columns": [
+            {
+              "id": "c753edac-48aa-485e-ae2b-5ae3e112eb8b",
+              "name": "user_id",
+              "type": "INT",
+              "position": 0,
+              "isPrimaryKey": true,
+              "isOptional": false
+            },
+            {
+              "id": "7b15f91a-dbb6-4988-a13e-5c393dda3a9f",
+              "name": "user_id",
+              "type": "VARCHAR(n)",
+              "position": 0,
+              "size": "100",
+              "isPrimaryKey": false
+            },
+            {
+              "id": "82377a74-439f-41df-ac65-f8627b1cd077",
+              "name": "name",
+              "type": "VARCHAR(n)",
+              "position": 0,
+              "size": "30",
+              "isPrimaryKey": false
+            },
+            {
+              "id": "ff75188b-d0d4-412d-af43-540c4e31a52e",
+              "name": "nickname",
+              "type": "VARCHAR(n)",
+              "position": 0,
+              "size": "20",
+              "isPrimaryKey": false
+            },
+            {
+              "id": "863d91e5-030e-419b-86e3-1c131235a77b",
+              "name": "phone_number",
+              "type": "VARCHAR(n)",
+              "position": 0,
+              "size": "13",
+              "isPrimaryKey": false
+            }
+          ],
+          "isSelected": false
+        },
+        "measured": {
+          "width": 240,
+          "height": 151
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "3f44c6f2-46ce-4788-800f-278fd16337d7",
+        "type": "Table",
+        "position": {
+          "x": 834,
+          "y": 146
+        },
+        "data": {
+          "label": "Play_record",
+          "isConnectable": false,
+          "columns": [
+            {
+              "id": "c41b46dc-52e6-42f6-9715-6d64db7ece73",
+              "name": "start_time",
+              "type": "INT",
+              "position": 0
+            },
+            {
+              "id": "35583b65-eafc-496b-9690-62af405ff3af",
+              "name": "end_time",
+              "type": "INT",
+              "position": 0
+            },
+            {
+              "id": "5d68118b-2fb2-479d-94ff-112bd868c075",
+              "name": "score",
+              "type": "INT",
+              "position": 0
+            },
+            {
+              "id": "fk_018cad64-aee6-4f03-b763-d5bf5e874a07",
+              "name": "fk_User",
+              "type": "None",
+              "isForeignKey": true,
+              "foreignKeyProps": {
+                "foreignKeyGroupId": "1682b82b-05bd-4c78-bdf6-6da5ec238d0d",
+                "sourceTableId": "0288c63b-032e-438c-a128-b10cf86491af",
+                "columns": [
+                  {
+                    "id": "fk_c753edac-48aa-485e-ae2b-5ae3e112eb8b",
+                    "name": "user_id",
+                    "type": "INT"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "fk_f2f279ff-3726-4808-872c-a5e28f8fbfc1",
+              "name": "fk_Game",
+              "type": "None",
+              "isForeignKey": true,
+              "foreignKeyProps": {
+                "foreignKeyGroupId": "d7f61c32-bd09-43e0-94c0-fdca5a21588c",
+                "sourceTableId": "9f266fe6-a9c7-49d3-86f3-54e94b77aa80",
+                "columns": [
+                  {
+                    "id": "fk_578c79f5-ef40-48b6-abe3-ef7b3c7aa71f",
+                    "name": "game_id",
+                    "type": "INT"
+                  }
+                ]
+              }
+            }
+          ],
+          "isSelected": false
+        },
+        "measured": {
+          "width": 240,
+          "height": 152
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "9f266fe6-a9c7-49d3-86f3-54e94b77aa80",
+        "type": "Table",
+        "position": {
+          "x": 1145,
+          "y": 145
+        },
+        "data": {
+          "label": "Game",
+          "isConnectable": false,
+          "columns": [
+            {
+              "id": "578c79f5-ef40-48b6-abe3-ef7b3c7aa71f",
+              "name": "game_id",
+              "type": "INT",
+              "position": 0,
+              "isPrimaryKey": true,
+              "isOptional": false
+            },
+            {
+              "id": "627e9818-bb72-4f84-b562-5f7b3360d496",
+              "name": "game_name",
+              "type": "VARCHAR(n)",
+              "position": 0,
+              "size": "100",
+              "isPrimaryKey": false
+            },
+            {
+              "id": "ffc9e0f9-a76d-42fe-aa11-33cac9c8d2be",
+              "name": "game_version",
+              "type": "VARCHAR(n)",
+              "position": 0,
+              "size": "100",
+              "isPrimaryKey": false
+            },
+            {
+              "id": "fb830d4d-f573-4d18-902f-0f68b2962ae2",
+              "name": "release_date",
+              "type": "DATE",
+              "position": 0,
+              "isPrimaryKey": false
+            },
+            {
+              "id": "67af2f68-9e78-4d7a-9bf7-623a6b56bb0c",
+              "name": "current_version_date",
+              "type": "DATE",
+              "position": 0,
+              "isPrimaryKey": false
+            }
+          ],
+          "isSelected": false
+        },
+        "measured": {
+          "width": 240,
+          "height": 151
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "4927af74-d65f-415c-8fd0-2f797f32e97e",
+        "type": "Label",
+        "position": {
+          "x": 750,
+          "y": 145
+        },
+        "data": {
+          "label": "1",
+          "isSelected": false
+        },
+        "measured": {
+          "width": 27,
+          "height": 44
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "baebd20f-d217-4f8e-9160-11938e8a6f87",
+        "type": "Label",
+        "position": {
+          "x": 1114,
+          "y": 143
+        },
+        "data": {
+          "label": "1",
+          "isSelected": false
+        },
+        "measured": {
+          "width": 27,
+          "height": 44
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "8aa32ff6-a978-410d-bfb0-53e39770bcac",
+        "type": "Label",
+        "position": {
+          "x": 1074,
+          "y": 244
+        },
+        "data": {
+          "label": "N",
+          "isSelected": false
+        },
+        "measured": {
+          "width": 32,
+          "height": 44
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "b3b3d4c5-f530-48ff-a24c-1b3bf3d1b057",
+        "type": "Label",
+        "position": {
+          "x": 801,
+          "y": 217
+        },
+        "data": {
+          "label": "N",
+          "isSelected": false
+        },
+        "measured": {
+          "width": 32,
+          "height": 44
+        },
+        "selected": true,
+        "dragging": false
+      }
+    ],
+    "edges": [
+      {
+        "id": "0288c63b-032e-438c-a128-b10cf86491af->3f44c6f2-46ce-4788-800f-278fd16337d7_1682b82b-05bd-4c78-bdf6-6da5ec238d0d",
+        "type": "Relational",
+        "source": "0288c63b-032e-438c-a128-b10cf86491af",
+        "targetHandle": "foreign-key-handle-1682b82b-05bd-4c78-bdf6-6da5ec238d0d",
+        "target": "3f44c6f2-46ce-4788-800f-278fd16337d7",
+        "markerStart": {
+          "type": "arrow"
+        },
+        "data": {
+          "foreignKeyProps": {
+            "foreignKeyGroupId": "1682b82b-05bd-4c78-bdf6-6da5ec238d0d",
+            "sourceTableId": "0288c63b-032e-438c-a128-b10cf86491af",
+            "columns": [
+              {
+                "id": "fk_c753edac-48aa-485e-ae2b-5ae3e112eb8b",
+                "name": "user_id",
+                "type": "INT"
+              }
+            ]
+          }
+        },
+        "selected": false
+      },
+      {
+        "id": "9f266fe6-a9c7-49d3-86f3-54e94b77aa80->3f44c6f2-46ce-4788-800f-278fd16337d7_d7f61c32-bd09-43e0-94c0-fdca5a21588c",
+        "type": "Relational",
+        "source": "9f266fe6-a9c7-49d3-86f3-54e94b77aa80",
+        "targetHandle": "foreign-key-handle-d7f61c32-bd09-43e0-94c0-fdca5a21588c",
+        "target": "3f44c6f2-46ce-4788-800f-278fd16337d7",
+        "markerStart": {
+          "type": "arrow"
+        },
+        "data": {
+          "foreignKeyProps": {
+            "foreignKeyGroupId": "d7f61c32-bd09-43e0-94c0-fdca5a21588c",
+            "sourceTableId": "9f266fe6-a9c7-49d3-86f3-54e94b77aa80",
+            "columns": [
+              {
+                "id": "fk_578c79f5-ef40-48b6-abe3-ef7b3c7aa71f",
+                "name": "game_id",
+                "type": "INT"
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "viewport": {
+      "x": -538.4812082894275,
+      "y": 130.34018264840182,
+      "zoom": 1.426062521952933
+    }
+  },
+  "name": "HW_05_2_Schema",
+  "folder": {
+    "name": "Diagrams",
+    "folderType": 1,
+    "depth": 0,
+    "id": 296608
+  },
+  "id": 407470,
+  "updatedAtTimestamp": 1776063431
+}
